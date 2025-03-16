@@ -9,56 +9,56 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-            VStack {
-                VStack(alignment: .leading) {
-                    Text("Overview")
-                        .font(DesignSystem.Typography.textPreset1)
-                        .bold()
-                        .foregroundColor(.black)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.leading)
-                
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
-                        BalanceCardView(title: "Current Balance",
-                                        amount: "$4,836.00",
-                                        backgroundColor: .black,
-                                        titleTextColor: .white,
-                                        amountTextColor: .white,
-                                        style: .plain)
-                        BalanceCardView(title: "Income",
-                                        amount: "$3,814.25",
-                                        backgroundColor: .white,
-                                        titleTextColor: DesignSystem.Colors.grey500,
-                                        amountTextColor: DesignSystem.Colors.grey900,
-                                        style: .plain)
-                        BalanceCardView(title: "Expenses",
-                                        amount: "$1,700.50",
-                                        backgroundColor: .white,
-                                        titleTextColor: DesignSystem.Colors.grey500,
-                                        amountTextColor: DesignSystem.Colors.grey900,
-                                        style: .plain)
-                    }
-                    .padding()
-                    
-                    PotsHomeView()
-                        .padding()
-                    
-                    TransactionsHomeView()
-                        .padding()
-                    
-                    BudgetHomeView()
-                        .padding()
-                }
-                .frame(maxWidth: .infinity)
-                
-                Spacer()
-                
-//                BottomBarView()
+        VStack {
+            VStack(alignment: .leading) {
+                Text("Overview")
+                    .font(DesignSystem.Typography.textPreset1)
+                    .bold()
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .background(DesignSystem.Colors.beige100)
+            .padding(.leading)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 12) {
+                    BalanceCardView(title: "Current Balance",
+                                    amount: "$4,836.00",
+                                    backgroundColor: .black,
+                                    titleTextColor: .white,
+                                    amountTextColor: .white,
+                                    style: .plain)
+                    BalanceCardView(title: "Income",
+                                    amount: "$3,814.25",
+                                    backgroundColor: .white,
+                                    titleTextColor: DesignSystem.Colors.grey500,
+                                    amountTextColor: DesignSystem.Colors.grey900,
+                                    style: .plain)
+                    BalanceCardView(title: "Expenses",
+                                    amount: "$1,700.50",
+                                    backgroundColor: .white,
+                                    titleTextColor: DesignSystem.Colors.grey500,
+                                    amountTextColor: DesignSystem.Colors.grey900,
+                                    style: .plain)
+                }
+                .padding()
+                
+                PotsHomeView()
+                    .padding()
+                
+                TransactionsHomeView()
+                    .padding()
+                
+                BudgetHomeView()
+                    .padding()
+            }
+            .frame(maxWidth: .infinity)
+            
+            Spacer()
+            
+            //                BottomBarView()
         }
+        .background(DesignSystem.Colors.beige100)
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
